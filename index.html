@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Burst | Enjoy our fresh & colorful fruits</title>
+    <!-- DaisyUI and Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind custom colors -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+      <header>
+          <nav class="md:mx-5 lg:mx-8 xl:mx-14 2xl:mx-[5vw] flex justify-between items-center lg:flex-col px-4 py-4 md:py-6 lg:py-2 xl:py-4 min-[2160px]:py-5">
+
+            <div class="absolute lg:static top-[-100%] grid grid-cols-3 justify-between gap-0 items-center bg-orange-600 rounded-full px-5 lg:py-2 min-[1835px]:py-3 min-[2160px]:py-8 w-full">
+              
+            <div class="absolute lg:static lg:min-h-fit bg-opacity-30 min-h-[100vh] left-24 top-[-100%] lg:w-auto w-full flex items-start px-5 py-5">
+              <ul class="flex justify-center items-center lg:gap-5 2xl:gap-8 xl:gap-10 min-[2160px]:gap-14 text-black font-medium w-full text-sm lg:text-sm 2xl:text-xl min-[1835px]:text-2xl min-[2160px]:text-3xl">
+                  <li><a class="hover:text-[#0097b2]" href="#">Home</a></li>
+                  <li><a class="hover:text-[#0097b2]" href="#">About Us</a></li>
+                  <li><a class="hover:text-[#0097b2]" href="#">Shop</a></li>
+                  <li><a class="hover:text-[#0097b2]" href="#">All Fruits</a></li>
+              </ul>
+            </div>
+            <div class="flex justify-center items-center text-center gap-2 font-bold">
+              <img class="w-8 xl:w-10 min-[1835px]:w-12 min-[2160px]:w-14" src="logo/logo.png" alt="">
+              <p class="text-lg xl:text-2xl min-[1835px]:text-3xl min-[2160px]:text-5xl" >Fruit Burst</p>
+            </div>
+            <div class="border-none bg-transparent flex justify-end items-center">
+              <input type="text" placeholder="Search Here" class="input min-[2160px]:pl-10 rounded-full min-[1835px]:h-16 min-[2160px]:h-24 xl:h-12 border-none w-[25vw] min-[1835px]:text-2xl min-[2160px]:text-4xl" />
+              <div class="absolute pr-5 min-[2160px]:pr-8">
+                <img class="w-5 min-[1835px]:w-6 min-[2160px]:w-10" src="icons/search.png" alt="">
+              </div>
+            </div>
+            </div>
+          <!-- Lg nav ends here -->
+            <div class="flex justify-center items-center text-center gap-2 font-bold lg:absolute lg:top-[-100%]">
+              <img class="w-8" src="logo/logo.png" alt="">
+              <p class="text-lg xl:text-xl" >Fruit Burst</p>
+            </div>
+            
+            <div class="flex items-center gap-5 ">
+                <ion-icon onclick="onToggleMenu(this)" class="text-3xl cursor-pointer lg:absolute lg:top-[-100%]" name="menu-outline"></ion-icon>
+            </div>
+            <div class="nav-links duration-500 absolute bg-slate-300 min-h-[100vh] left-24 md:left-[50%] top-[-100%] right-[-0] max-w-full align-middle px-5 py-5 md:px-12 md:py-10">
+              <ul class="flex flex-col gap-6 text-black font-medium">
+                  <li><a class="hover:text-[#0097b2]" href="#">Home</a></li>
+                  <li><a class="hover:text-[#0097b2]" href="#">About Us</a></li>
+                  <li><a class="hover:text-[#0097b2]" href="#">Shop</a></li>
+                  <li><a class="hover:text-[#0097b2]" href="#">All Fruits</a></li>
+              </ul>
+            </div>
+          </nav>
+
+      
+      </header>
+        <main>
+    
+        </main>
+    
+    <footer>
+
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const navlinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu-outline'?'close':'menu-outline'
+            navlinks.classList.toggle('top-[11%]')
+        }
+    </script>
+</body>
+</html>
